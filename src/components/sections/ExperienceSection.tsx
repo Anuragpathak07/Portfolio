@@ -23,7 +23,7 @@ export const ExperienceSection = () => {
     <section id="experience" className="py-32 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-4xl">
         <AnimatedSection>
-          <span className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4 block">
+          <span className="text-2xl font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4 block">
             Experience
           </span>
         </AnimatedSection>

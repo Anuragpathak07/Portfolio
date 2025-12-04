@@ -12,47 +12,67 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col items-center justify-center relative gradient-hero px-6"
+      className="min-h-screen flex items-center justify-center relative gradient-hero px-6"
     >
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+        {/* LEFT SIDE — Profile Photo */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
-          className="mb-6"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center"
         >
-          <span className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-muted-foreground">
-          Solution-Driven Product Developer
-          </span>
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl border border-border">
+            <img
+              src="/images/profile.jpeg"   // <-- CHANGE THIS TO YOUR PROFILE IMAGE PATH
+              alt="Profile Photo"
+              className="w-full h-full object-cover"
+            />
+
+            {/* Soft glowing background effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+          </div>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
-          className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight text-primary mb-8"
-        >
-          Anurag Pathak
-        </motion.h1>
-
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-16"
-        >
-          Solving real problems with clean design and intelligent, user-focused development.
-        </motion.p>
-
+        {/* RIGHT SIDE — Text Content */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="absolute bottom-24 left-1/2 -translate-x-1/2"
+          className="text-center lg:text-left"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
+          <motion.span
+            className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-muted-foreground block mb-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
+            Solution-Driven Product Developer
+          </motion.span>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold tracking-tight text-primary mb-6"
+          >
+            Anurag Pathak
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.5 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-12 mx-auto lg:mx-0"
+          >
+            Solving real problems with clean design and intelligent, user-focused development.
+          </motion.p>
+
+          {/* Scroll Button */}
           <motion.button
             onClick={scrollToAbout}
-            className="group flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 mx-auto lg:mx-0"
             whileHover={{ y: 5 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
@@ -67,7 +87,7 @@ export const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Subtle decorative elements */}
+      {/* Decorative fade bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
     </section>
   );

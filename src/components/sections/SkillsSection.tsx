@@ -29,7 +29,7 @@ export const SkillsSection = () => {
     <section id="skills" className="py-32 px-6 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
         <AnimatedSection>
-          <span className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4 block">
+          <span className="text-2xl font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4 block">
             Skills
           </span>
         </AnimatedSection>

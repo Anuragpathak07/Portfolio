@@ -5,13 +5,13 @@ export const AboutSection = () => {
     <section id="about" className="py-32 px-6">
       <div className="container mx-auto max-w-4xl">
         <AnimatedSection>
-          <span className="text-sm font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4 block">
+          <span className="text-2xl font-medium tracking-[0.2em] uppercase text-muted-foreground mb-4 block">
             About
           </span>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-tight mb-12">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-primary leading-tight mb-12">
           I design purposeful digital experiences and build solutions that are precise, scalable, and user-focused.
           </h2>
         </AnimatedSection>
