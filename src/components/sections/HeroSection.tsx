@@ -25,13 +25,10 @@ export const HeroSection = () => {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-xl border border-border">
             <img
-              src="/images/profile.jpeg"   // <-- CHANGE THIS TO YOUR PROFILE IMAGE PATH
+              src="/images/profile.jpeg"
               alt="Profile Photo"
               className="w-full h-full object-cover"
             />
-
-            {/* Soft glowing background effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
           </div>
         </motion.div>
 
@@ -44,30 +41,32 @@ export const HeroSection = () => {
         >
           <motion.span
             className="text-sm md:text-base font-medium tracking-[0.3em] uppercase text-muted-foreground block mb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
           >
             Solution-Driven Product Developer
           </motion.span>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
             className="text-5xl sm:text-7xl md:text-8xl lg:text-8xl font-bold tracking-tight text-primary mb-6"
           >
             Anurag Pathak
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.5 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-12 mx-auto lg:mx-0"
+            className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-6 mx-auto lg:mx-0"
           >
             Solving real problems with clean design and intelligent, user-focused development.
           </motion.p>
+
+          {/* Download Resume Button */}
+          <motion.a
+            href="/resume.pdf"       // 👈 PLACE YOUR RESUME IN /public/resume.pdf
+            download
+            className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/80 transition-all duration-300 mb-8"
+            whileHover={{ scale: 1.07 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Download Resume
+          </motion.a>
 
           {/* Scroll Button */}
           <motion.button
@@ -87,7 +86,6 @@ export const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Decorative fade bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent pointer-events-none" />
     </section>
   );
