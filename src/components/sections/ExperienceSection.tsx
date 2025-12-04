@@ -15,6 +15,21 @@ const experiences = [
     description:
     "Engineered full-stack web platforms featuring real-time dashboards, interactive data workflows, and AI-driven insights. Delivered a production-ready mobile survey app that streamlined field operations and enabled seamless data syncing.",
   },
+  {
+    role: "Virtual Android Developer Internship",
+    company: "Eduskills-Google for Developers",
+    period: "Januray 2025 - March 2025",
+    description:
+    "Worked with Kotlin, Jetpack components, Google Drive API, and map libraries to build scalable Android features. Implemented real-time form validation, background uploads, and optimized performance for low-network conditions.",
+  },
+  {
+    role: "Virtual AI/ML Internship",
+    company: "Eduskills-Google for Developers",
+    period: "April 2025 - June 2025",
+    description:
+    "Worked with Python, TensorFlow, Scikit-Learn, and NLP libraries to build and evaluate ML models. Developed mini projects focused on sentiment analysis, recommendation systems, and tabular classification while applying best practices in model tuning and cross-validation.",
+  },
+  
   
 ];
 

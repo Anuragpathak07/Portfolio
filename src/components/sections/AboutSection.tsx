@@ -19,7 +19,7 @@ export const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           <AnimatedSection delay={0.2}>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm a Full-stack AI/ML & Web GIS developer focused on building
+             I’m Anurag Pathak, a 3rd-year Computer Science student at RCOEM with a CGPA of 9.01 ,A Full-stack AI/ML & Web GIS developer focused on building
               high-performance applications and modern geospatial solutions. I work across
               backend systems, interfaces, and automation pipelines, ensuring technology
               that is scalable, efficient, and user-centric.
@@ -37,27 +37,7 @@ export const AboutSection = () => {
         </div>
 
 
-        <AnimatedSection delay={0.4}>
-          <div className="mt-20 pt-12 border-t border-border">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-              {[
-                { number: "5+", label: "Years Experience" },
-                { number: "50+", label: "Projects Completed" },
-                { number: "30+", label: "Happy Clients" },
-                { number: "15+", label: "Awards Won" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center md:text-left">
-                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
+        
       </div>
     </section>
   );
