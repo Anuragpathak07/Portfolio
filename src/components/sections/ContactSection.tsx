@@ -1,6 +1,20 @@
 import { motion } from "framer-motion";
 import { AnimatedSection } from "../AnimatedSection";
-import { Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight, Github, Linkedin, Twitter, DribbbleIcon } from "lucide-react";
+
+const socials = [
+  {
+    name: "LinkedIn",
+    href: "www.linkedin.com/in/anurag-pathak-2b043b197",
+    icon: <Linkedin size={18} />,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/Anuragpathak07",
+    icon: <Github size={18} />,
+  },
+  
+];
 
 export const ContactSection = () => {
   return (
@@ -29,6 +43,7 @@ export const ContactSection = () => {
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
+          {/* LEFT SIDE */}
           <AnimatedSection delay={0.3}>
             <div className="space-y-8">
               <div>
@@ -37,11 +52,11 @@ export const ContactSection = () => {
                   <span className="text-sm uppercase tracking-wider">Email</span>
                 </div>
                 <motion.a
-                  href="mailto:hello@johndoe.com"
+                  href="mailto:anuragpathak2005@gmail.com"
                   className="text-xl md:text-2xl font-medium text-primary hover:text-muted-foreground transition-colors inline-flex items-center gap-2 group"
                   whileHover={{ x: 5 }}
                 >
-                  hello@johndoe.com
+                  anuragpathak2005@gmail.com
                   <ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                 </motion.a>
               </div>
@@ -52,33 +67,39 @@ export const ContactSection = () => {
                   <span className="text-sm uppercase tracking-wider">Location</span>
                 </div>
                 <p className="text-xl md:text-2xl font-medium text-primary">
-                  San Francisco, CA
+                  Nagpur, Maharashtra, India
                 </p>
               </div>
             </div>
           </AnimatedSection>
 
+          {/* RIGHT SIDE - SOCIAL LINKS */}
           <AnimatedSection delay={0.4}>
             <div className="space-y-6">
               <h3 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">
                 Connect
               </h3>
+
               <div className="flex flex-wrap gap-4">
-                {["LinkedIn", "GitHub", "Twitter", "Dribbble"].map((platform) => (
+                {socials.map(({ name, href, icon }) => (
                   <motion.a
-                    key={platform}
-                    href="#"
-                    className="px-6 py-3 border border-border rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-6 py-3 border border-border rounded-full text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 inline-flex items-center gap-2"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    {platform}
+                    {icon}
+                    {name}
                   </motion.a>
                 ))}
               </div>
             </div>
           </AnimatedSection>
         </div>
+
       </div>
     </section>
   );
