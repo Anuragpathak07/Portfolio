@@ -26,6 +26,18 @@ const skills = [
 
 const certificates = [
   {
+    name: "Professional Certificate in IBM RAG and Agentic AI",
+    issuer: "IBM",
+    year: "2025",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/497KNBQEP0W8",
+  },
+  {
+    name: "Data Analysis with R Programmings",
+    issuer: "Google",
+    year: "2025",
+    link: "http://coursera.org/account/accomplishments/verify/CAN4O1I7GOED",
+  },
+  {
     name: "Python for Data Science, AI & Development",
     issuer: "IBM",
     year: "2024",
@@ -43,12 +55,7 @@ const certificates = [
     year: "2024",
     link: "https://www.coursera.org/account/accomplishments/verify/M4WHK8YF53U6",
   },
-  {
-    name: "Data Analysis with R Programmings",
-    issuer: "Google",
-    year: "2025",
-    link: "http://coursera.org/account/accomplishments/verify/CAN4O1I7GOED",
-  },
+  
 ];
 
 export const SkillsSection = () => {
